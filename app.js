@@ -1,6 +1,6 @@
 let userNum = document.getElementById("getNumber");
 userNum.addEventListener("keydown", function (e) {
-    if (e.keycode == 32) {
+    if (e.keyCode == 13) {
         run(e);
     }
 });
@@ -11,9 +11,11 @@ let counter = 0;
 
 function run() {
     document.getElementById("paragraph").innerHTML = "Welcome to the Random Number Game!";
-    document.getElementById("paragraph").style.backgroundColor = "silver";
+    document.getElementById("paragraph").style.backgroundColor = "white";
+    document.getElementById("paragraph").style.borderStyle = "solid";
+    document.getElementById("paragraph").style.borderRadius = "50px";
     document.getElementById("paragraph").style.color = "black";
-    document.getElementById("paragraph").style.padding = "15px";
+    document.getElementById("paragraph").style.padding = "30px";
     document.getElementById("paragraph").style.textAlign = "center";
     randomNum();
     userNumber();
@@ -26,7 +28,9 @@ function randomNum() {
     x.innerHTML = ran;
     x.style.backgroundColor ="white";
     x.style.color = "black";
-    x.style.padding = "30px";
+    x.style.padding = "50px";
+    x.style.borderStyle = "dotted";
+    x.style.borderRadius = "50px";
     x.style.textAlign = "center";
     return ran;
 
@@ -38,7 +42,9 @@ function userNumber() {
     y.innerHTML = user;
     y.style.color = "black";
     y.style.backgroundColor = "white";
-    y.style.padding = "30px";
+    y.style.padding = "50px";
+    y.style.borderStyle = "dotted";
+    y.style.borderRadius = "50px";
     y.style.textAlign = "center";
     return user;
 }
@@ -61,12 +67,15 @@ function compareNumbers() {
         c.style.backgroundColor = "white";
         c.style.padding = "30px";
         c.style.textAlign = "center";
+        document.querySelector("body").style.backgroundColor = "red";
+        
     } else if ( a == b) {
         z.innerHTML = "These numbers are the same! The computer got " + b + ", and you got " + a;
         z.style.color = "black";
         z.style.backgroundColor = "white";
         z.style.padding = "30px";
         z.style.textAlign = "center";
+        document.querySelector("body").style.backgroundColor = "green";
     }
 
     resetInput();
