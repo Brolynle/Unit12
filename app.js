@@ -29,7 +29,7 @@ function randomNum() {
     x.style.backgroundColor ="white";
     x.style.color = "black";
     x.style.padding = "50px";
-    x.style.borderStyle = "dotted";
+    x.style.borderStyle = "solid";
     x.style.borderRadius = "50px";
     x.style.textAlign = "center";
     return ran;
@@ -43,7 +43,7 @@ function userNumber() {
     y.style.color = "black";
     y.style.backgroundColor = "white";
     y.style.padding = "50px";
-    y.style.borderStyle = "dotted";
+    y.style.borderStyle = "solid";
     y.style.borderRadius = "50px";
     y.style.textAlign = "center";
     return user;
@@ -61,12 +61,16 @@ function compareNumbers() {
         z.style.backgroundColor = "white";
         z.style.padding = "30px";
         z.style.textAlign = "center";
+        z.style.borderRadius = "50px";
+        z.style.borderStyle = "solid";
         counter++;
         c.innerHTML = "You have tried " + counter + " times."
         c.style.color = "black";
         c.style.backgroundColor = "white";
         c.style.padding = "30px";
         c.style.textAlign = "center";
+        c.style.borderRadius = "50px";
+        c.style.borderStyle = "solid";
         document.querySelector("body").style.backgroundColor = "red";
         
     } else if ( a == b) {
@@ -75,6 +79,8 @@ function compareNumbers() {
         z.style.backgroundColor = "white";
         z.style.padding = "30px";
         z.style.textAlign = "center";
+        z.style.borderRadius = "50px";
+        z.style.borderStyle = "solid";
         document.querySelector("body").style.backgroundColor = "green";
     }
 
